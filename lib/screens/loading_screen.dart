@@ -12,10 +12,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
     try {
       position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.low);
+      print(position);
     } catch (e) {
-      print('unable to find location');
+      print(e);
     }
-    print(position);
   }
 
   @override
